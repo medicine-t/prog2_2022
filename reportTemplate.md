@@ -1,4 +1,4 @@
-## プログラミングⅠ　　　
+## プログラミングⅡ 
 ### 課題レポートX : \<HERE INSERT TITLE\>
 
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -13,7 +13,7 @@
 </script>
 
 <div style="text-align: right;">
-編集日:2022/XX/XX<br>
+編集日:2022-XX-XX<br>
 報告者:e225717 高嶺拓矢<br>  
 協力者:なし
 </div>
