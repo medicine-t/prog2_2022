@@ -26,10 +26,23 @@ public class Week1 {
         }
     }
 
-    public static RealMatrix computeAddMatrix(double[][] matrix_1, double[][] matrix_2) {
-        int len_i = matrix_1.length;
-        int len_j = matrix_1[0].length;
-        RealMatrix ret = MatrixUtils.createRealMatrix(new double[len_i][len_j]);
+    public static RealMatrix computeAddMatrix(RealMatrix matrix_1, RealMatrix matrix_2) {
+        RealMatrix ret = MatrixUtils
+                .createRealMatrix(new double[matrix_1.getRowDimension()][matrix_1.getColumnDimension()]);
+
+        if (matrix_1.getRowDimension() != matrix_2.getRowDimension()) {
+            System.err.println("行数がおかしい");
+
+        } else if (matrix_1.getColumnDimension() != matrix_2.getColumnDimension()) {
+            System.err.println("列数がおかしい");
+        } else {
+            ret = matrix_1.add(matrix_2);
+        }
+        return ret;
+    }
+
+    public static double[][] computeAddMatrix(double[][] matrix_1, double[][] matrix_2) {
+        double[][] ret = new double[matrix_1.length][matrix_1[0].length];
 
         if (matrix_1.length != matrix_2.length) {
             System.err.println("行数がおかしい");
@@ -37,9 +50,11 @@ public class Week1 {
         } else if (matrix_1[0].length != matrix_2[0].length) {
             System.err.println("列数がおかしい");
         } else {
-            RealMatrix mat1 = MatrixUtils.createRealMatrix(matrix_1);
-            RealMatrix mat2 = MatrixUtils.createRealMatrix(matrix_2);
-            ret = mat1.add(mat2);
+            for (int i = 0; i < matrix_1.length; i++) {
+                for (int j = 0; j < matrix_1[i].length; j++) {
+                    ret[i][j] = matrix_1[i][j] + matrix_2[i][j];
+                }
+            }
         }
         return ret;
     }
@@ -56,14 +71,19 @@ public class Week1 {
         // 以下は computeAddMatrix メソッドを実装したあとで実行する内容。
         // 最初の動作確認時にはコメントアウトしておくと良い。
         System.out.println("\n# matrix22_1 + matrix22_2");
-        RealMatrix level2_1 = computeAddMatrix(matrix22_1, matrix22_2);
+        var level2_1 = computeAddMatrix(matrix22_1, matrix22_2);
         printMatrix(level2_1);
 
         System.out.println("\n# matrix23_1 + matrix23_2");
-        RealMatrix level2_2 = computeAddMatrix(matrix23_1, matrix23_2);
+        var level2_2 = computeAddMatrix(matrix23_1, matrix23_2);
         printMatrix(level2_2);
 
         System.out.println("\n# 行列サイズが異る場合");
-        RealMatrix level2_3 = computeAddMatrix(matrix22_1, matrix23_1);
+        var level2_3 = computeAddMatrix(matrix22_1, matrix23_1);
+
+        RealMatrix mat22_1 = MatrixUtils.createRealMatrix(matrix22_1);
+        RealMatrix mat22_2 = MatrixUtils.createRealMatrix(matrix22_2);
+        System.out.println("\n# RealMatrix 22_1 + 22_2");
+        printMatrix(mat22_1.add(mat22_2));
     }
 }
