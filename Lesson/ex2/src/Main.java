@@ -5,7 +5,7 @@ public class Main {
         Chatbot bot2 = new Chatbot("bot2");
         bot1.greeting();
         bot2.greeting();
-        bot2.name = "bot2 gen2";
+        bot2.setName("bot2 gen2");
         bot2.greeting();
     }
 }
