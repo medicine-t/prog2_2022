@@ -19,7 +19,13 @@ public class Chatbot {
     }
 
     public void setName(String name) {
+        if (name.equals("差別用語")) {
+            System.err.println("禁止されています");
+            return;
+        }
+        System.out.printf("ボット名を%sから%sに変更します\n", this.name, name);
         this.name = name;
+
     }
 
 }
