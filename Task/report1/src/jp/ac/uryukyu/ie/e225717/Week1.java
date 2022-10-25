@@ -32,9 +32,10 @@ public class Week1 {
 
         if (matrix_1.getRowDimension() != matrix_2.getRowDimension()) {
             System.err.println("行数がおかしい");
-
+            System.exit(1);
         } else if (matrix_1.getColumnDimension() != matrix_2.getColumnDimension()) {
             System.err.println("列数がおかしい");
+            System.exit(1);
         } else {
             ret = matrix_1.add(matrix_2);
         }
