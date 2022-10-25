@@ -7,6 +7,10 @@ public class Chatbot {
 
     Chatbot(String _name) {
         name = _name;
-        System.out.printf("チャットボット名%sを作成します。", name);
+        System.out.printf("チャットボット名%sを作成します。\n", name);
+    }
+
+    void greeting() {
+        System.out.printf("はじめまして%sです、よろしくおねがいします\n", name);
     }
 }
