@@ -30,10 +30,13 @@
 NullPointerexceptionが発生しました
 Cannot invoke "String.length()" because "str" is null
 ```
-実行結果
-```bash
-NullPointerexceptionが発生しました
-Cannot invoke "String.length()" because "str" is null
+また、以下の用に記述しても`System.out.println(e.to_String());`と同様の結果が得られることがわかった。
+```java
+try{
+  ...//省略
+}catch (Exception e){//例としてExceptionのハンドリングをしている
+  System.out.println(e);
+}
 ```
 
 #### ステップ3: APIリファレンスを参照してみよう。
