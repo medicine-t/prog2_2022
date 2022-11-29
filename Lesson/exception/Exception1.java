@@ -12,7 +12,7 @@ public class Exception1 {
 			}
 			fw.close();
 		} catch (IOException e) {
-			System.out.println(e);
+			System.out.println(e.getMessage());
 		}
 	}
 }
