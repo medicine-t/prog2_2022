@@ -25,3 +25,8 @@
 `NullPointerException`はobjectが必要な場面においてnullを利用しようとしたときに発生するランタイムエラーの一種。例としてnullのインスタンスメソッドを呼び出そうとするときやnullインスタンスのフィールドにアクセスしたり編集を試みた際に発生する。
 
 #### ステップ2: 例外処理を記述せよ。
+実行結果
+```bash
+NullPointerexceptionが発生しました
+Cannot invoke "String.length()" because "str" is null
+```
