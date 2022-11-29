@@ -30,6 +30,11 @@
 NullPointerexceptionが発生しました
 Cannot invoke "String.length()" because "str" is null
 ```
+実行結果
+```bash
+NullPointerexceptionが発生しました
+Cannot invoke "String.length()" because "str" is null
+```
 
 #### ステップ3: APIリファレンスを参照してみよう。
 ##### Integer.parseInt()メソッドと発生した例外について、APIリファレンスで調べよ。
