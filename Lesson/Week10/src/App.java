@@ -1,14 +1,15 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ArrayList<String> names = new ArrayList<>();
-        names.add("湊");
-        names.add("朝香");
-        names.add("菅原");
-        var it = names.iterator();
-        while (it.hasNext()) {
-            var e = it.next();
+        Set<String> colors = new HashSet<String>();
+        colors.add("赤");
+        colors.add("青");
+        colors.add("黃");
+        System.out.println(colors.size());
+        for (String e : colors) {
             System.out.println(e);
         }
     }
